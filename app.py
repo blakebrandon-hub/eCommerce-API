@@ -427,7 +427,9 @@ def view_one_product(current_user, product_id):
 
 @app.route('/view')
 @token_required
-def view_all_products(current_user, limit):
+def view_all_products(current_user):
+
+	limit = request.args['limit']
 	
 	products = stripe.Product.list(limit=limit)
 
