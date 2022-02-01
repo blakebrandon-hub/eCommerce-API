@@ -81,15 +81,31 @@ Prices must have a unit amount, the type of currency, and a product.
 }
 ```
 
-**Retrieve a price**: GET request price at '/price/<price_id>'
+**Retrieve a price**: GET request price at '/price/&lt;price_id>'
 
-**Update a price**: PUT request at '/price/<price_id>'
+**Update a price**: PUT request at '/price/&lt;price_id>'
 
 **List all prices**: GET request at '/prices'
 
 <br>
 
 ## USER ROUTES
+
+### **<u>ACCOUNT</u>**
+
+**Retrieve account information**: GET request '/account' endpoint
+
+<br>
+
+### **<u>PRODUCTS</u>**
+
+**Query products**: GET request at '/q?search=' followed by search parameters
+
+**Preview a product**: Get request '/view/&lt;product_id>'
+
+**List all products**: Get request '/view?limit=' followed by number of products to list
+
+<br>
 
 ### **<u>CART</u>**
 
