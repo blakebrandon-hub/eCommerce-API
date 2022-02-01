@@ -437,9 +437,11 @@ def view_all_products(current_user):
 @token_required
 def query_products(current_user):
 
-	query = request.args['query']
+	query = request.args['search']
 
-	return query
+	products = stripe.Product.list()
+
+	return str(type(products))
 
 	
 if __name__ == '__main__':
