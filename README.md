@@ -16,7 +16,9 @@
 
 <br>
 
-<u>**USER ROUTES**</u>  
+## ADMIN-ONLY ROUTES
+
+<u>**USER-RELATED**</u>
 
 **Create User**: POST request user information to '/user' endpoint
 
@@ -39,7 +41,7 @@
 
 <br>
 
-<u>**PRODUCT ROUTES**</u>  
+<u>**PRODUCTS**</u>  
 
 **Creating a product**: POST request product information at '/product' endpoint
 
@@ -65,7 +67,7 @@ Products must have a name. You can also include a description, up to eight image
 
 <br>
 
-**<u>PRICE ROUTES</u>**  
+**<u>PRICES</u>**  
 
 **Creating a price**: POST request price information at '/price' endpoint
 
@@ -86,6 +88,8 @@ Prices must have a unit amount, the type of currency, and a product.
 **List all prices**: GET request at '/prices'
 
 <br>
+
+## USER ROUTES
 
 **<u>CART ROUTES</u>**
 
