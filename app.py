@@ -443,10 +443,13 @@ def query_products(current_user):
 
 	output = []
 
-	for i in products:
-		output.append(i['name'])
+	for product in products:
+		prod_dict = {}
+		prod_dict['name'] = product.name
+		prod_dict['product_id'] = product.id
+		output.append(prod_dict)
 
-	return jsonify({"message": output})
+	return jsonify({"products": output})
 
 	
 if __name__ == '__main__':
