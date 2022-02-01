@@ -2,7 +2,7 @@
 
 ### https://ecomm-api-demo.herokuapp.com/
 
-**<u>LOGIN INSTRUCTIONS</u>**
+### **<u>LOGIN INSTRUCTIONS</u>**
 
 1. GET request HTTP Basic Authentication at '/login' endpoint
 
@@ -18,9 +18,9 @@
 
 ## ADMIN-ONLY ROUTES
 
-<u>**USER-RELATED**</u>
+### <u>**USER-RELATED**</u>
 
-**Create User**: POST request user information to '/user' endpoint
+**Create a user**: POST request user information to '/user' endpoint
 
 ```json
 {
@@ -31,19 +31,19 @@
 }
 ```
 
-**Retrieving a user**: GET request at '/user/&lt;name>'
+**Retrieve a user**: GET request at '/user/&lt;name>'
 
-**Promoting a user**: PUT request at '/user/&lt;name>'
+**Promote a user**: PUT request at '/user/&lt;name>'
 
-**Deleting a user**: DELETE request at '/user/&lt;name>'
+**Delete a user**: DELETE request at '/user/&lt;name>'
 
 **List all users**: GET request at '/users'
 
 <br>
 
-<u>**PRODUCTS**</u>  
+### <u>**PRODUCTS**</u>  
 
-**Creating a product**: POST request product information at '/product' endpoint
+**Create a product**: POST request product information at '/product' endpoint
 
 Products must have a name. You can also include a description, up to eight images, metadata and toggle the active status of a product. Products are active by default. 
 
@@ -57,19 +57,19 @@ Products must have a name. You can also include a description, up to eight image
 }
 ```
 
-**Retrieving a product**: GET request at '/product/&lt;product_id>'
+**Retrieve a product**: GET request at '/product/&lt;product_id>'
 
-**Updating a product**: PUT request at '/product/&lt;product_id>'
+**Update a product**: PUT request at '/product/&lt;product_id>'
 
-**Deleting a product**: DELETE request at '/product/&lt;product_id>'
+**Delete a product**: DELETE request at '/product/&lt;product_id>'
 
 **List all products**: GET request at '/products'
 
 <br>
 
-**<u>PRICES</u>**  
+### **<u>PRICES</u>**  
 
-**Creating a price**: POST request price information at '/price' endpoint
+**Create a price**: POST request price information at '/price' endpoint
 
 Prices must have a unit amount, the type of currency, and a product.
 
@@ -81,9 +81,9 @@ Prices must have a unit amount, the type of currency, and a product.
 }
 ```
 
-**Retrieving a price**: GET request price at '/price/<price_id>'
+**Retrieve a price**: GET request price at '/price/<price_id>'
 
-**Updating a price**: PUT request at '/price/<price_id>'
+**Update a price**: PUT request at '/price/<price_id>'
 
 **List all prices**: GET request at '/prices'
 
@@ -91,7 +91,7 @@ Prices must have a unit amount, the type of currency, and a product.
 
 ## USER ROUTES
 
-**<u>CART</u>**
+### **<u>CART</u>**
 
 **Retrieve all items**: GET request at '/cart' endpoint
 
@@ -109,7 +109,7 @@ Prices must have a unit amount, the type of currency, and a product.
 
 <br>
 
-**<u>CHECKOUT</u>**
+### **<u>CHECKOUT</u>**
 
 GET request '/checkout/&lt;token>' in browser
 
