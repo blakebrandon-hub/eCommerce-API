@@ -51,7 +51,7 @@ def token_required(func):
 
 		try:
 			decoded = jwt.decode(token, environ.get('SECRET_KEY'))
-			current_user = User.query.filter_by(username=decoded['name']).first()
+			current_user = User.query.filter_by(username=decoded['username']).first()
 		except:
 			return jsonify({'message': 'token is invalid'})
 
@@ -374,7 +374,7 @@ def checkout(token):
 		decoded = jwt.decode(token, environ.get('SECRET_KEY'))
 
 		current_user = User.query.filter_by(username=decoded['name']).first()
-
+		
 		products = Product.query.filter_by(user_id=current_user.username).all()
 
 		line_items = []
@@ -409,6 +409,38 @@ def success():
 def cancel():
 	return jsonify({"message": "payment cancelled"})
 
+@app.route('/account')
+@token_required
+def get_account_info(current_user):
 
+	acc_dict = {}
+	acc_dict['username'] = current_user.username
+	acc_dict['email'] = current_user.email
+
+	return jsonify({"account": acc_dict})
+	
+@app.route('/view/<product_id>')
+@token_required
+def view_one_product(current_user, product_id):
+
+	return stripe.Product.retrieve(product_id)
+
+@app.route('/view')
+@token_required
+def view_all_products(current_user):
+	
+	products = stripe.Product.list()
+
+	return jsonify({"products": products})
+
+@app.route('/q')
+@token_required
+def query_products(current_user):
+
+	query = request.args['query']
+
+	return query
+
+	
 if __name__ == '__main__':
 	app.run(debug=True)
