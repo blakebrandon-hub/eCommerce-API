@@ -51,7 +51,7 @@ def token_required(func):
 
 		try:
 			decoded = jwt.decode(token, environ.get('SECRET_KEY'))
-			current_user = User.query.filter_by(username=decoded['username']).first()
+			current_user = User.query.filter_by(username=decoded['name']).first()
 		except:
 			return jsonify({'message': 'token is invalid'})
 
