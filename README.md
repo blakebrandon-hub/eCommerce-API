@@ -91,7 +91,7 @@ Prices must have a unit amount, the type of currency, and a product.
 
 ## USER ROUTES
 
-**<u>CART ROUTES</u>**
+**<u>CART</u>**
 
 **Retrieve all cart items**: GET request at '/cart' endpoint
 
