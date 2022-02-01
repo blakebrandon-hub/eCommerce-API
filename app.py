@@ -441,7 +441,12 @@ def query_products(current_user):
 
 	products = stripe.Product.list()
 
-	return str(type(products))
+	output = []
+
+	for i in products:
+		output.append(i['name'])
+
+	return jsonify({"message": output})
 
 	
 if __name__ == '__main__':
