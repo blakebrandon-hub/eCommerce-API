@@ -93,15 +93,15 @@ Prices must have a unit amount, the type of currency, and a product.
 
 **<u>CART</u>**
 
-**Retrieve all cart items**: GET request at '/cart' endpoint
+**Retrieve all items**: GET request at '/cart' endpoint
 
-**Add an item to cart**: POST request product ID at '/cart'
+**Add an item**: POST request product ID at '/cart'
 
 ```json
 {"product_id": "price_1KNfF5EN9TFKicCwFKRnvJqY"}
 ```
 
-**Delete an item from cart**: DELETE request product ID at '/Cart'
+**Delete an item**: DELETE request product ID at '/Cart'
 
 ```json
 {"product_id": "price_1KLvfbEN9TFKicCwfOGSTNnI"}
