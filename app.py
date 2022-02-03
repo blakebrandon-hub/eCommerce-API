@@ -9,6 +9,8 @@ from os import environ
 import uuid
 import datetime
 
+from models import User, Product
+
 
 app = Flask(__name__)
 
@@ -21,21 +23,6 @@ app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 db = SQLAlchemy(app)
 
 stripe.api_key = app.config['STRIPE_SECRET_KEY']
-
-
-class User(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
-	public_id = db.Column(db.String)
-	username = db.Column(db.String)
-	email = db.Column(db.String(80))
-	password = db.Column(db.String)
-	admin = db.Column(db.Boolean)
-
-
-class Product(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
-	product_id = db.Column(db.String)
-	user_id = db.Column(db.String)
 
 
 def token_required(func):
