@@ -6,6 +6,7 @@ Base = declarative_base()
 
 
 class User(Base):
+	__tablename__ = 'users'
 	id = Column(Integer, primary_key=True)
 	public_id = Column(String)
 	username = Column(String)
@@ -15,6 +16,7 @@ class User(Base):
 
 
 class Product(Base):
+	__tablename__ = 'products'
 	id = Column(Integer, primary_key=True)
 	product_id = Column(String)
 	user_id = Column(String)
